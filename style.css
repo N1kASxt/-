@@ -1,0 +1,339 @@
+/* --- Базовые стили --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif; /* Основной шрифт Roboto по ТЗ */
+    color: #333;
+    line-height: 1.6;
+    background-color: #fff;
+}
+
+/* По ТЗ: Шрифт Lora для заголовков */
+h1, h2 {
+    font-family: 'Lora', serif;
+}
+
+/* По ТЗ: Шрифт Roboto для остальных элементов */
+h3, h4, .btn, .section-subtitle, label, .book-price, .phone-link, .form-btn {
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* =========================================
+   СТИЛИЗАЦИЯ СЕКЦИЙ (по правой колонке ТЗ)
+   ========================================= */
+
+/* --- Секция 1: main --- */
+.section-main {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 40px 50px 40px;
+}
+
+/* По ТЗ: header имеет padding 120px и выравнивание по центру */
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 120px 0; 
+    /* Примечание: 120px сверху и снизу сделает шапку огромной, 
+       но это точное требование из правой колонки ТЗ */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-title {
+    font-size: 32px; /* По ТЗ */
+    font-weight: bold;
+    color: #333;
+}
+
+/* По ТЗ: main-content имеет flex-direction: row, gap: 20px */
+.main-content {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.main-text {
+    flex: 1;
+}
+
+.main-subtitle {
+    font-size: 48px; /* Примерный размер для главного заголовка */
+    margin-bottom: 30px;
+    color: #333;
+    line-height: 1.2;
+}
+
+/* По ТЗ: Кнопка (btn) шириной 500px, padding 15px 35px, border-radius 5px, bg #556B2F, color #fff */
+.btn {
+    display: inline-block;
+    width: 500px; /* Очень широкая кнопка, как в ТЗ */
+    max-width: 100%;
+    padding: 15px 35px;
+    background-color: #556B2F;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 18px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #3e5022;
+}
+
+.main-image {
+    flex: 1;
+    text-align: right;
+}
+
+.main-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* --- Секция 2: second-section --- */
+/* По ТЗ: padding 50px (сверху) и 100px (снизу), bg #F0F8E0 */
+.second-section {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 40px 100px 40px;
+    background-color: #F0F8E0; 
+}
+
+/* По ТЗ: Заголовок h2 цвет #556B2F, шрифт Lora, размер 32px */
+.section-title {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #556B2F;
+    font-family: 'Lora', serif;
+}
+
+/* По ТЗ: second-section-info display flex, gap 20px */
+.second-section-info {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+/* По ТЗ: Изображение ширина 500px, border-radius 10px */
+.shop-img {
+    width: 500px;
+    max-width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* По ТЗ: Шрифт текста Lora, размер 18px, line-height 1.5 */
+.text-content {
+    flex: 1;
+    font-family: 'Lora', serif;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.text-content p {
+    margin-bottom: 15px;
+}
+
+/* --- Секция 3: third-section --- */
+/* По ТЗ: padding 80px сверху и снизу */
+.third-section {
+    padding: 80px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* По ТЗ: Заголовок h2 (название секции) цвет #666, шрифт Lora, размер 18px */
+.third-section .section-title {
+    font-size: 18px; 
+    color: #666;
+    margin-bottom: 10px;
+    text-transform: uppercase; /* Судя по тексту в ТЗ */
+}
+
+/* По ТЗ: section-subtitle цвет #556B2F, шрифт Roboto, размер 28px */
+.section-subtitle {
+    font-size: 28px;
+    color: #556B2F;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* По ТЗ: display flex, gap 20px, flex-wrap: wrap */
+.third-section-books {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+    gap: 20px;
+    max-width: 1200px;
+    justify-content: center;
+}
+
+/* По ТЗ: Карточка flex-direction: column, по центру, padding 20px, border-radius 5px, bg #fff */
+.book-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05); /* Легкая тень для красоты */
+}
+
+/* По ТЗ: Изображение шириной 200px, border-radius 5px */
+.book-img {
+    width: 200px;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+/* По ТЗ: book-title цвет #333, шрифт Roboto, размер 22px */
+.book-title {
+    font-size: 22px;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* По ТЗ: book-author цвет #666, размер 16px */
+.book-author {
+    font-size: 16px;
+    color: #666;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* По ТЗ: book-price цвет #556B2F, шрифт Roboto, размер 20px */
+.book-price {
+    font-size: 20px;
+    color: #556B2F;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+/* --- Секция 4: footer --- */
+/* По ТЗ: padding 60px сверху и снизу, bg #556B2F, color #fff */
+.footer {
+    background-color: #556B2F;
+    color: #fff;
+    padding: 60px 40px;
+    display: flex;
+    justify-content: center;
+}
+
+/* По ТЗ: footer-content display flex, flex-direction: column, gap: 20px */
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 800px;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+}
+
+/* По ТЗ: footer-title цвет #fff, шрифт Roboto, размер 28px */
+.footer-title {
+    font-size: 28px;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* По ТЗ: footer-text размер 16px */
+.footer-text {
+    font-size: 16px;
+    font-family: 'Lora', serif; /* По ТЗ для текста Lora */
+    margin-bottom: 20px;
+}
+
+.phone-link {
+    color: #F0F8E0;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/* По ТЗ: footer-form display flex, flex-direction: column, gap: 20px, width: 100% */
+.footer-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* По ТЗ: form-group display flex, flex-direction: column, по центру */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 100%;
+}
+
+.form-group label {
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #F0F8E0;
+}
+
+/* По ТЗ: form-input padding 10px, border-radius 5px, border: none */
+.form-input {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    font-family: 'Lora', serif;
+    outline: none;
+    width: 100%;
+}
+
+.form-input:focus {
+    box-shadow: 0 0 0 2px #F0F8E0;
+}
+
+/* По ТЗ: form-btn padding 15px, bg #F0F8E0, color #556B2F, border-radius 5px, размер шрифта 18px */
+.form-btn {
+    padding: 15px;
+    background-color: #F0F8E0;
+    color: #556B2F;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%; /* По ТЗ кнопка занимает 100% ширины */
+    font-weight: bold;
+}
+
+.form-btn:hover {
+    background-color: #fff;
+}
