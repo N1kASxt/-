@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Книжковий Рай</title>
+    <!-- Подключение шрифтов Lora (для заголовков) и Roboto (для текста) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Секция 1: main -->
+    <section class="section-main">
+        <header class="header">
+            <div class="logo-container">
+                <img src="https://via.placeholder.com/50x50/556B2F/FFFFFF?text=Logo" alt="Логотип Книжковий Рай" class="logo-img">
+                <h1 class="header-title">Книжковий Рай</h1>
+            </div>
+        </header>
+        
+        <div class="main-content">
+            <div class="main-text">
+                <h2 class="main-subtitle">Відкрий для себе наступну улюблену книгу</h2>
+                <a href="#second-section" class="btn">Дізнатися більше</a>
+            </div>
+            <div class="main-image">
+                <img src="https://via.placeholder.com/600x400/E8F5E9/556B2F?text=Image+Library" alt="Бібліотека">
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция 2: second-section -->
+    <section class="second-section" id="second-section">
+        <h2 class="section-title">Ласкаво просимо до Книжкового Раю</h2>
+        <div class="second-section-info">
+            <img src="https://via.placeholder.com/500x350/E8F5E9/556B2F?text=Image+Shop" alt="Інтер'єр магазину" class="shop-img">
+            <div class="text-content">
+                <p>Ми — команда ентузіастів, яка прагне зробити читання доступним та приємним для кожного. У нашому магазині ви знайдете широкий вибір книг на будь-який смак.</p>
+                <p>Наша мета — створити затишний простір, де кожен зможе знайти свою історію.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция 3: third-section -->
+    <section class="third-section">
+        <h2 class="section-title">РЕКОМЕНДОВАНІ КНИГИ</h2>
+        <h3 class="section-subtitle">Наша колекція</h3>
+        
+        <div class="third-section-books">
+            <!-- Карточка 1 -->
+            <article class="book-card">
+                <img src="https://via.placeholder.com/200x300/556B2F/FFFFFF?text=Book+1" alt="Книга 1" class="book-img">
+                <h4 class="book-title">Маленький принц</h4>
+                <p class="book-author">Антуан де Сент-Екзюпері</p>
+                <p class="book-price">150 грн</p>
+            </article>
+            <!-- Карточка 2 -->
+            <article class="book-card">
+                <img src="https://via.placeholder.com/200x300/556B2F/FFFFFF?text=Book+2" alt="Книга 2" class="book-img">
+                <h4 class="book-title">1984</h4>
+                <p class="book-author">Джордж Орвелл</p>
+                <p class="book-price">200 грн</p>
+            </article>
+            <!-- Карточка 3 -->
+            <article class="book-card">
+                <img src="https://via.placeholder.com/200x300/556B2F/FFFFFF?text=Book+3" alt="Книга 3" class="book-img">
+                <h4 class="book-title">Гаррі Поттер</h4>
+                <p class="book-author">Дж. К. Ролінґ</p>
+                <p class="book-price">350 грн</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- Секция 4: footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <h3 class="footer-title">Приєднуйтесь до нашої спільноти</h3>
+            <p class="footer-text">Підпишіться на нашу розсилку, щоб отримувати останні новини про новинки, ексклюзивні пропозиції та багато іншого. Ласка, зв'яжіться з нами за номером <a href="tel:+380123456789" class="phone-link">+380 123-456-789</a></p>
+            
+            <form action="#" class="footer-form" method="POST">
+                <div class="form-group">
+                    <label for="name">Ім'я</label>
+                    <input type="text" id="name" name="name" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Електронна пошта</label>
+                    <input type="email" id="email" name="email" class="form-input" required>
+                </div>
+                <button type="submit" class="form-btn">Підписатися</button>
+            </form>
+        </div>
+    </footer>
+
+</body>
+</html>
